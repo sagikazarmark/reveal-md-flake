@@ -1,0 +1,59 @@
+{
+  "nodes": {
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1631561581,
+        "narHash": "sha256-3VQMV5zvxaVLvqqUrNz3iJelLw30mIVSfZmAaauM3dA=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "7e5bf3925f6fbdfaf50a2a7ca0be2879c4261d19",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1634334098,
+        "narHash": "sha256-QaDPwrLhNpSmcNSTHYH8brO8LrGthdCXQRwxI0VLQhw=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "c93f3d1d7420d8f53ad6bc88d08648cbe65bc88a",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "reveal-md-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1629124562,
+        "narHash": "sha256-K1EaciRPCA+y1yvpLIK6I0H0Q0K6HDlLTofUTEF8iHQ=",
+        "owner": "webpro",
+        "repo": "reveal-md",
+        "rev": "06b9605bd9cf7bb2186b263df141d76d50aa09ac",
+        "type": "github"
+      },
+      "original": {
+        "owner": "webpro",
+        "repo": "reveal-md",
+        "rev": "06b9605bd9cf7bb2186b263df141d76d50aa09ac",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs",
+        "reveal-md-src": "reveal-md-src"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
