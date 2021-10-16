@@ -1,6 +1,6 @@
 # Nix flake for [reveal-md](https://github.com/webpro/reveal-md)
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sagikazarmark/todobackend-go-kit/CI?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sagikazarmark/reveal-md-flake/CI?style=flat-square)
 [![built with nix](https://img.shields.io/badge/builtwith-nix-7d81f7?style=flat-square)](https://builtwithnix.org)
 
 
