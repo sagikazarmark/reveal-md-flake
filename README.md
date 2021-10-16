@@ -5,7 +5,31 @@
 
 ## Usage
 
-TODO
+In the shell:
+
+```shell
+$ nix shell github:sagikazarmark/reveal-md-flake
+$ which reveal-md
+/nix/store/y0yqmnk8js2k9rbaakcr3sfyhfq0fd7l-reveal-md/bin/reveal-md
+```
+
+In your own `flake.nix`:
+
+```nix
+  # define an input
+  reveal-md-flake.url = "github:sagikazarmark/reveal-md-flake";
+
+  # Option 1: as an overlay
+  pkgs = import nixpkgs {
+    inherit system;
+    overlays = [
+      reveal-md-flake.overlay
+    ];
+  };
+
+  # Option 2: directly
+  devShell = pkgs.mkShell { buildInputs = with pkgs; [ reveal-md-flake.defaultPackage."${system}" ]; };
+```
 
 
 ## License
