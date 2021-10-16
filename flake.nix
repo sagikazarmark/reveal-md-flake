@@ -22,10 +22,10 @@
 
         defaultPackage = packages.reveal-md;
 
+        devShell = pkgs.mkShell { buildInputs = [ packages.reveal-md ]; };
+      }) // {
         overlay = (final: prev: {
           reveal-md = prev.defaultPackage;
         });
-
-        devShell = pkgs.mkShell { buildInputs = [ packages.reveal-md ]; };
-      });
+      };
 }
