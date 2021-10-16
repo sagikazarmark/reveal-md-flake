@@ -11,17 +11,25 @@
 
   outputs = { self, nixpkgs, flake-utils, reveal-md-src }:
     flake-utils.lib.eachDefaultSystem (system:
-      let pkgs = import nixpkgs { inherit system; };
-      in rec {
-        packages.reveal-md = pkgs.mkYarnPackage {
-          name = "reveal-md";
-          src = reveal-md-src;
-          packageJSON = ./package.json;
-          yarnLock = ./yarn.lock;
+      let
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [ self.overlay ];
         };
+      in rec {
+        packages.reveal-md = pkgs.reveal-md;
 
-        defaultPackage = packages.reveal-md;
+        defaultPackage = pkgs.reveal-md;
 
-        devShell = pkgs.mkShell { buildInputs = [ packages.reveal-md ]; };
-      });
+        devShell = pkgs.mkShell { buildInputs = [ pkgs.reveal-md ]; };
+      }) // {
+        overlay = (final: prev: {
+          reveal-md = prev.mkYarnPackage {
+            name = "reveal-md";
+            src = reveal-md-src;
+            packageJSON = ./package.json;
+            yarnLock = ./yarn.lock;
+          };
+        });
+      };
 }
