@@ -22,7 +22,9 @@
 
         defaultPackage = packages.reveal-md;
 
-        overlay = final: prev: import ./. final prev;
+        overlay = final: prev: {
+          reveal-md = prev.defaultPackage."${prev.system}";
+        };
 
         devShell = pkgs.mkShell { buildInputs = [ packages.reveal-md ]; };
       });
