@@ -1,4 +1,4 @@
-> # ⚠️ Deprecated: reveal-md is now available in nixpkgs. ⚠️
+> # ⚠️ Deprecated: reveal-md is now available in nixpkgs.
 
 # Nix flake for [reveal-md](https://github.com/webpro/reveal-md)
 
