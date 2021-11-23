@@ -1,3 +1,5 @@
+> # ⚠️ Deprecated: reveal-md is now available in nixpkgs. ⚠️
+
 # Nix flake for [reveal-md](https://github.com/webpro/reveal-md)
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sagikazarmark/reveal-md-flake/CI?style=flat-square)
